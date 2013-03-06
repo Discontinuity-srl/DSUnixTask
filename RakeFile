@@ -1,0 +1,4 @@
+desc "Lints the podspec using this repo as its source"
+task :lint do
+  sh "pod spec lint --local DSUnixTask.podspec"
+end

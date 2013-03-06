@@ -1,0 +1,806 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E5374CE316E6CB9E00087B12 /* DSUnixTaskSubProcessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5374CCB16E6CB9E00087B12 /* DSUnixTaskSubProcessManager.m */; };
+		E5374CE416E6CB9E00087B12 /* DSUnixTaskAbstractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5374CCF16E6CB9E00087B12 /* DSUnixTaskAbstractManager.m */; };
+		E5374CE616E6CB9E00087B12 /* DSUnixTaskRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = E5374CD416E6CB9E00087B12 /* DSUnixTaskRunner.m */; };
+		E5374CE716E6CB9E00087B12 /* DSUnixShellTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E5374CD716E6CB9E00087B12 /* DSUnixShellTask.m */; };
+		E5374CE816E6CB9E00087B12 /* DSUnixTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E5374CDA16E6CB9E00087B12 /* DSUnixTask.m */; };
+		E5374CEE16E6CBAD00087B12 /* DSUnixTaskRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = E5374CD416E6CB9E00087B12 /* DSUnixTaskRunner.m */; };
+		E5374CF616E6CC4700087B12 /* DSUnixTaskClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E5374CF516E6CC4700087B12 /* DSUnixTaskClient.m */; };
+		E5374CFC16E6CC5700087B12 /* DSUnixTaskService.m in Sources */ = {isa = PBXBuildFile; fileRef = E5374CF916E6CC5700087B12 /* DSUnixTaskService.m */; };
+		E5374CFD16E6CC5700087B12 /* DSUnixTaskServiceMain.m in Sources */ = {isa = PBXBuildFile; fileRef = E5374CFB16E6CC5700087B12 /* DSUnixTaskServiceMain.m */; };
+		E56C067716E6248E00362561 /* DemoTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E56C067216E6248E00362561 /* DemoTests-Info.plist */; };
+		E56C067816E6248E00362561 /* DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E56C067416E6248E00362561 /* DemoTests.m */; };
+		E56C067916E6248E00362561 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E56C067516E6248E00362561 /* InfoPlist.strings */; };
+		E586774616E78915003A4A1A /* DSUnixTaskXPCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5374CFF16E6CD1000087B12 /* DSUnixTaskXPCManager.m */; };
+		E5907B7E16E541ED009B3441 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5907B7D16E541ED009B3441 /* Cocoa.framework */; };
+		E5907B8816E541ED009B3441 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5907B8616E541ED009B3441 /* InfoPlist.strings */; };
+		E5907B8A16E541ED009B3441 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5907B8916E541ED009B3441 /* main.m */; };
+		E5907B8E16E541ED009B3441 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E5907B8C16E541ED009B3441 /* Credits.rtf */; };
+		E5907B9116E541ED009B3441 /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5907B9016E541ED009B3441 /* DSAppDelegate.m */; };
+		E5907B9416E541EE009B3441 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5907B9216E541EE009B3441 /* MainMenu.xib */; };
+		E5907B9C16E541EE009B3441 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5907B9B16E541EE009B3441 /* SenTestingKit.framework */; };
+		E5907B9D16E541EE009B3441 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5907B7D16E541ED009B3441 /* Cocoa.framework */; };
+		E5907BC716E5444F009B3441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5907BC616E5444F009B3441 /* Foundation.framework */; };
+		E5907BCD16E5444F009B3441 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5907BCB16E5444F009B3441 /* InfoPlist.strings */; };
+		E5907BD016E5444F009B3441 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5907BCF16E5444F009B3441 /* main.m */; };
+		E5907BDD16E54A7F009B3441 /* it.discontinuity.Service-Demo.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5907BC516E5444F009B3441 /* it.discontinuity.Service-Demo.xpc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5907B9E16E541EE009B3441 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5907B7216E541ED009B3441 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5907B7916E541ED009B3441;
+			remoteInfo = Demo;
+		};
+		E5907BDE16E54A86009B3441 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5907B7216E541ED009B3441 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5907BC416E5444F009B3441;
+			remoteInfo = "Service Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E5907BDC16E54A7B009B3441 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/XPCServices;
+			dstSubfolderSpec = 1;
+			files = (
+				E5907BDD16E54A7F009B3441 /* it.discontinuity.Service-Demo.xpc in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E5374CC816E6CB9E00087B12 /* DSUnixTaskInterfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTaskInterfaces.h; sourceTree = "<group>"; };
+		E5374CCA16E6CB9E00087B12 /* DSUnixTaskSubProcessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTaskSubProcessManager.h; sourceTree = "<group>"; };
+		E5374CCB16E6CB9E00087B12 /* DSUnixTaskSubProcessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTaskSubProcessManager.m; sourceTree = "<group>"; };
+		E5374CCC16E6CB9E00087B12 /* DSUnixTaskAbstractManager+SubclassesInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSUnixTaskAbstractManager+SubclassesInterface.h"; sourceTree = "<group>"; };
+		E5374CCD16E6CB9E00087B12 /* DSUnixTaskAbstractManager+TaskInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSUnixTaskAbstractManager+TaskInterface.h"; sourceTree = "<group>"; };
+		E5374CCE16E6CB9E00087B12 /* DSUnixTaskAbstractManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTaskAbstractManager.h; sourceTree = "<group>"; };
+		E5374CCF16E6CB9E00087B12 /* DSUnixTaskAbstractManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTaskAbstractManager.m; sourceTree = "<group>"; };
+		E5374CD316E6CB9E00087B12 /* DSUnixTaskRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTaskRunner.h; sourceTree = "<group>"; };
+		E5374CD416E6CB9E00087B12 /* DSUnixTaskRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTaskRunner.m; sourceTree = "<group>"; };
+		E5374CD616E6CB9E00087B12 /* DSUnixShellTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixShellTask.h; sourceTree = "<group>"; };
+		E5374CD716E6CB9E00087B12 /* DSUnixShellTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixShellTask.m; sourceTree = "<group>"; };
+		E5374CD816E6CB9E00087B12 /* DSUnixTask+ManagerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DSUnixTask+ManagerInterface.h"; sourceTree = "<group>"; };
+		E5374CD916E6CB9E00087B12 /* DSUnixTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTask.h; sourceTree = "<group>"; };
+		E5374CDA16E6CB9E00087B12 /* DSUnixTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTask.m; sourceTree = "<group>"; };
+		E5374CEF16E6CBCB00087B12 /* DSUnixTask.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = DSUnixTask.podspec; sourceTree = "<group>"; };
+		E5374CF016E6CBCB00087B12 /* LICENCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
+		E5374CF116E6CBCB00087B12 /* RakeFile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = RakeFile; sourceTree = "<group>"; };
+		E5374CF216E6CBCB00087B12 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E5374CF416E6CC4700087B12 /* DSUnixTaskClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTaskClient.h; sourceTree = "<group>"; };
+		E5374CF516E6CC4700087B12 /* DSUnixTaskClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTaskClient.m; sourceTree = "<group>"; };
+		E5374CF816E6CC5700087B12 /* DSUnixTaskService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTaskService.h; sourceTree = "<group>"; };
+		E5374CF916E6CC5700087B12 /* DSUnixTaskService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTaskService.m; sourceTree = "<group>"; };
+		E5374CFA16E6CC5700087B12 /* DSUnixTaskServiceMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTaskServiceMain.h; sourceTree = "<group>"; };
+		E5374CFB16E6CC5700087B12 /* DSUnixTaskServiceMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTaskServiceMain.m; sourceTree = "<group>"; };
+		E5374CFE16E6CD1000087B12 /* DSUnixTaskXPCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSUnixTaskXPCManager.h; sourceTree = "<group>"; };
+		E5374CFF16E6CD1000087B12 /* DSUnixTaskXPCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSUnixTaskXPCManager.m; sourceTree = "<group>"; };
+		E56C067216E6248E00362561 /* DemoTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DemoTests-Info.plist"; sourceTree = "<group>"; };
+		E56C067316E6248E00362561 /* DemoTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTests.h; sourceTree = "<group>"; };
+		E56C067416E6248E00362561 /* DemoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTests.m; sourceTree = "<group>"; };
+		E56C067616E6248E00362561 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E5907B7A16E541ED009B3441 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Demo.app; path = "Client Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5907B7D16E541ED009B3441 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E5907B8016E541ED009B3441 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E5907B8116E541ED009B3441 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E5907B8216E541ED009B3441 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E5907B8516E541ED009B3441 /* Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo-Info.plist"; sourceTree = "<group>"; };
+		E5907B8716E541ED009B3441 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E5907B8916E541ED009B3441 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5907B8B16E541ED009B3441 /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
+		E5907B8D16E541ED009B3441 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E5907B8F16E541ED009B3441 /* DSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAppDelegate.h; sourceTree = "<group>"; };
+		E5907B9016E541ED009B3441 /* DSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAppDelegate.m; sourceTree = "<group>"; };
+		E5907B9316E541EE009B3441 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E5907B9A16E541EE009B3441 /* DemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DemoTests.octest; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5907B9B16E541EE009B3441 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E5907BC516E5444F009B3441 /* it.discontinuity.Service-Demo.xpc */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "it.discontinuity.Service-Demo.xpc"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5907BC616E5444F009B3441 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E5907BCA16E5444F009B3441 /* Service Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Service Demo-Info.plist"; sourceTree = "<group>"; };
+		E5907BCC16E5444F009B3441 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E5907BCE16E5444F009B3441 /* Service Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Service Demo-Prefix.pch"; sourceTree = "<group>"; };
+		E5907BCF16E5444F009B3441 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5907B7716E541ED009B3441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5907B7E16E541ED009B3441 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5907B9616E541EE009B3441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5907B9C16E541EE009B3441 /* SenTestingKit.framework in Frameworks */,
+				E5907B9D16E541EE009B3441 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5907BC216E5444F009B3441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5907BC716E5444F009B3441 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E5374CC616E6CB9E00087B12 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E5374CC716E6CB9E00087B12 /* Core */,
+				E5374CF316E6CC4700087B12 /* XPCClient */,
+				E5374CF716E6CC5700087B12 /* XPCService */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E5374CC716E6CB9E00087B12 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E5374CC816E6CB9E00087B12 /* DSUnixTaskInterfaces.h */,
+				E5374CC916E6CB9E00087B12 /* TaskManagers */,
+				E5374CD216E6CB9E00087B12 /* TaskRunner */,
+				E5374CD516E6CB9E00087B12 /* Tasks */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E5374CC916E6CB9E00087B12 /* TaskManagers */ = {
+			isa = PBXGroup;
+			children = (
+				E5374CCA16E6CB9E00087B12 /* DSUnixTaskSubProcessManager.h */,
+				E5374CCB16E6CB9E00087B12 /* DSUnixTaskSubProcessManager.m */,
+				E5374CCC16E6CB9E00087B12 /* DSUnixTaskAbstractManager+SubclassesInterface.h */,
+				E5374CCD16E6CB9E00087B12 /* DSUnixTaskAbstractManager+TaskInterface.h */,
+				E5374CCE16E6CB9E00087B12 /* DSUnixTaskAbstractManager.h */,
+				E5374CCF16E6CB9E00087B12 /* DSUnixTaskAbstractManager.m */,
+			);
+			path = TaskManagers;
+			sourceTree = "<group>";
+		};
+		E5374CD216E6CB9E00087B12 /* TaskRunner */ = {
+			isa = PBXGroup;
+			children = (
+				E5374CD316E6CB9E00087B12 /* DSUnixTaskRunner.h */,
+				E5374CD416E6CB9E00087B12 /* DSUnixTaskRunner.m */,
+			);
+			path = TaskRunner;
+			sourceTree = "<group>";
+		};
+		E5374CD516E6CB9E00087B12 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				E5374CD616E6CB9E00087B12 /* DSUnixShellTask.h */,
+				E5374CD716E6CB9E00087B12 /* DSUnixShellTask.m */,
+				E5374CD816E6CB9E00087B12 /* DSUnixTask+ManagerInterface.h */,
+				E5374CD916E6CB9E00087B12 /* DSUnixTask.h */,
+				E5374CDA16E6CB9E00087B12 /* DSUnixTask.m */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		E5374CF316E6CC4700087B12 /* XPCClient */ = {
+			isa = PBXGroup;
+			children = (
+				E5374CF416E6CC4700087B12 /* DSUnixTaskClient.h */,
+				E5374CF516E6CC4700087B12 /* DSUnixTaskClient.m */,
+				E5374CFE16E6CD1000087B12 /* DSUnixTaskXPCManager.h */,
+				E5374CFF16E6CD1000087B12 /* DSUnixTaskXPCManager.m */,
+			);
+			path = XPCClient;
+			sourceTree = "<group>";
+		};
+		E5374CF716E6CC5700087B12 /* XPCService */ = {
+			isa = PBXGroup;
+			children = (
+				E5374CF816E6CC5700087B12 /* DSUnixTaskService.h */,
+				E5374CF916E6CC5700087B12 /* DSUnixTaskService.m */,
+				E5374CFA16E6CC5700087B12 /* DSUnixTaskServiceMain.h */,
+				E5374CFB16E6CC5700087B12 /* DSUnixTaskServiceMain.m */,
+			);
+			path = XPCService;
+			sourceTree = "<group>";
+		};
+		E56C067116E6248E00362561 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E56C067316E6248E00362561 /* DemoTests.h */,
+				E56C067416E6248E00362561 /* DemoTests.m */,
+				E56C067A16E624B100362561 /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E56C067A16E624B100362561 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E56C067216E6248E00362561 /* DemoTests-Info.plist */,
+				E56C067516E6248E00362561 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E5907B7116E541ED009B3441 = {
+			isa = PBXGroup;
+			children = (
+				E5374CC616E6CB9E00087B12 /* Classes */,
+				E56C067116E6248E00362561 /* Tests */,
+				E5907B8316E541ED009B3441 /* Client Demo */,
+				E5907BC816E5444F009B3441 /* Service Demo */,
+				E5907B7C16E541ED009B3441 /* Frameworks */,
+				E5907B7B16E541ED009B3441 /* Products */,
+				E5374CEF16E6CBCB00087B12 /* DSUnixTask.podspec */,
+				E5374CF116E6CBCB00087B12 /* RakeFile */,
+				E5374CF216E6CBCB00087B12 /* README.md */,
+				E5374CF016E6CBCB00087B12 /* LICENCE */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		E5907B7B16E541ED009B3441 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5907B7A16E541ED009B3441 /* Demo.app */,
+				E5907B9A16E541EE009B3441 /* DemoTests.octest */,
+				E5907BC516E5444F009B3441 /* it.discontinuity.Service-Demo.xpc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5907B7C16E541ED009B3441 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5907B7D16E541ED009B3441 /* Cocoa.framework */,
+				E5907B9B16E541EE009B3441 /* SenTestingKit.framework */,
+				E5907BC616E5444F009B3441 /* Foundation.framework */,
+				E5907B7F16E541ED009B3441 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5907B7F16E541ED009B3441 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5907B8016E541ED009B3441 /* AppKit.framework */,
+				E5907B8116E541ED009B3441 /* CoreData.framework */,
+				E5907B8216E541ED009B3441 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E5907B8316E541ED009B3441 /* Client Demo */ = {
+			isa = PBXGroup;
+			children = (
+				E5907B8F16E541ED009B3441 /* DSAppDelegate.h */,
+				E5907B9016E541ED009B3441 /* DSAppDelegate.m */,
+				E5907B9216E541EE009B3441 /* MainMenu.xib */,
+				E5907B8416E541ED009B3441 /* Supporting Files */,
+			);
+			name = "Client Demo";
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		E5907B8416E541ED009B3441 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5907B8516E541ED009B3441 /* Demo-Info.plist */,
+				E5907B8616E541ED009B3441 /* InfoPlist.strings */,
+				E5907B8916E541ED009B3441 /* main.m */,
+				E5907B8B16E541ED009B3441 /* Demo-Prefix.pch */,
+				E5907B8C16E541ED009B3441 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E5907BC816E5444F009B3441 /* Service Demo */ = {
+			isa = PBXGroup;
+			children = (
+				E5907BCF16E5444F009B3441 /* main.m */,
+				E5907BC916E5444F009B3441 /* Supporting Files */,
+			);
+			path = "Service Demo";
+			sourceTree = "<group>";
+		};
+		E5907BC916E5444F009B3441 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5907BCA16E5444F009B3441 /* Service Demo-Info.plist */,
+				E5907BCB16E5444F009B3441 /* InfoPlist.strings */,
+				E5907BCE16E5444F009B3441 /* Service Demo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5907B7916E541ED009B3441 /* Client Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5907BAB16E541EE009B3441 /* Build configuration list for PBXNativeTarget "Client Demo" */;
+			buildPhases = (
+				E5907B7616E541ED009B3441 /* Sources */,
+				E5907B7716E541ED009B3441 /* Frameworks */,
+				E5907B7816E541ED009B3441 /* Resources */,
+				E5907BDC16E54A7B009B3441 /* CopyFiles */,
+				5B390238834C42D0B8F7231A /* Warn for TODO and FIXME comments */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5907BDF16E54A86009B3441 /* PBXTargetDependency */,
+			);
+			name = "Client Demo";
+			productName = Demo;
+			productReference = E5907B7A16E541ED009B3441 /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5907B9916E541EE009B3441 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5907BAE16E541EE009B3441 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				E5907B9516E541EE009B3441 /* Sources */,
+				E5907B9616E541EE009B3441 /* Frameworks */,
+				E5907B9716E541EE009B3441 /* Resources */,
+				E5907B9816E541EE009B3441 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5907B9F16E541EE009B3441 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = DemoTests;
+			productReference = E5907B9A16E541EE009B3441 /* DemoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		E5907BC416E5444F009B3441 /* Service Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5907BD116E5444F009B3441 /* Build configuration list for PBXNativeTarget "Service Demo" */;
+			buildPhases = (
+				E5907BC116E5444F009B3441 /* Sources */,
+				E5907BC216E5444F009B3441 /* Frameworks */,
+				E5907BC316E5444F009B3441 /* Resources */,
+				9991FCDEB14D40D3A7F63AD5 /* Warn for TODO and FIXME comments */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Service Demo";
+			productName = "Service Demo";
+			productReference = E5907BC516E5444F009B3441 /* it.discontinuity.Service-Demo.xpc */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5907B7216E541ED009B3441 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DS;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Discontinuity s.r.l. unipersonale";
+			};
+			buildConfigurationList = E5907B7516E541ED009B3441 /* Build configuration list for PBXProject "DSUnixTask" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E5907B7116E541ED009B3441;
+			productRefGroup = E5907B7B16E541ED009B3441 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5907B7916E541ED009B3441 /* Client Demo */,
+				E5907B9916E541EE009B3441 /* Tests */,
+				E5907BC416E5444F009B3441 /* Service Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5907B7816E541ED009B3441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5907B8816E541ED009B3441 /* InfoPlist.strings in Resources */,
+				E5907B8E16E541ED009B3441 /* Credits.rtf in Resources */,
+				E5907B9416E541EE009B3441 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5907B9716E541EE009B3441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E56C067716E6248E00362561 /* DemoTests-Info.plist in Resources */,
+				E56C067916E6248E00362561 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5907BC316E5444F009B3441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5907BCD16E5444F009B3441 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B390238834C42D0B8F7231A /* Warn for TODO and FIXME comments */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Warn for TODO and FIXME comments";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+		};
+		9991FCDEB14D40D3A7F63AD5 /* Warn for TODO and FIXME comments */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Warn for TODO and FIXME comments";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+		};
+		E5907B9816E541EE009B3441 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5907B7616E541ED009B3441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5907B8A16E541ED009B3441 /* main.m in Sources */,
+				E5907B9116E541ED009B3441 /* DSAppDelegate.m in Sources */,
+				E5374CE316E6CB9E00087B12 /* DSUnixTaskSubProcessManager.m in Sources */,
+				E5374CE416E6CB9E00087B12 /* DSUnixTaskAbstractManager.m in Sources */,
+				E5374CE616E6CB9E00087B12 /* DSUnixTaskRunner.m in Sources */,
+				E5374CE716E6CB9E00087B12 /* DSUnixShellTask.m in Sources */,
+				E5374CE816E6CB9E00087B12 /* DSUnixTask.m in Sources */,
+				E5374CF616E6CC4700087B12 /* DSUnixTaskClient.m in Sources */,
+				E586774616E78915003A4A1A /* DSUnixTaskXPCManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5907B9516E541EE009B3441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E56C067816E6248E00362561 /* DemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5907BC116E5444F009B3441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5907BD016E5444F009B3441 /* main.m in Sources */,
+				E5374CEE16E6CBAD00087B12 /* DSUnixTaskRunner.m in Sources */,
+				E5374CFC16E6CC5700087B12 /* DSUnixTaskService.m in Sources */,
+				E5374CFD16E6CC5700087B12 /* DSUnixTaskServiceMain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E5907B9F16E541EE009B3441 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5907B7916E541ED009B3441 /* Client Demo */;
+			targetProxy = E5907B9E16E541EE009B3441 /* PBXContainerItemProxy */;
+		};
+		E5907BDF16E54A86009B3441 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5907BC416E5444F009B3441 /* Service Demo */;
+			targetProxy = E5907BDE16E54A86009B3441 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E56C067516E6248E00362561 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E56C067616E6248E00362561 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E5907B8616E541ED009B3441 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5907B8716E541ED009B3441 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E5907B8C16E541ED009B3441 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5907B8D16E541ED009B3441 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E5907B9216E541EE009B3441 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5907B9316E541EE009B3441 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		E5907BCB16E5444F009B3441 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5907BCC16E5444F009B3441 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5907BA916E541EE009B3441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E5907BAA16E541EE009B3441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E5907BAC16E541EE009B3441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
+				INFOPLIST_FILE = "Demo/Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E5907BAD16E541EE009B3441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				INFOPLIST_FILE = "Demo/Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E5907BAF16E541EE009B3441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Demo.app/Contents/MacOS/Demo";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
+				INFOPLIST_FILE = "DemoTests/DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E5907BB016E541EE009B3441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Demo.app/Contents/MacOS/Demo";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
+				INFOPLIST_FILE = "DemoTests/DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		E5907BD216E5444F009B3441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Service Demo/Service Demo-Prefix.pch";
+				INFOPLIST_FILE = "Service Demo/Service Demo-Info.plist";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = "it.discontinuity.$(TARGET_NAME:rfc1034identifier)";
+				WRAPPER_EXTENSION = xpc;
+			};
+			name = Debug;
+		};
+		E5907BD316E5444F009B3441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Service Demo/Service Demo-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				INFOPLIST_FILE = "Service Demo/Service Demo-Info.plist";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = "it.discontinuity.$(TARGET_NAME:rfc1034identifier)";
+				WRAPPER_EXTENSION = xpc;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5907B7516E541ED009B3441 /* Build configuration list for PBXProject "DSUnixTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5907BA916E541EE009B3441 /* Debug */,
+				E5907BAA16E541EE009B3441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5907BAB16E541EE009B3441 /* Build configuration list for PBXNativeTarget "Client Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5907BAC16E541EE009B3441 /* Debug */,
+				E5907BAD16E541EE009B3441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5907BAE16E541EE009B3441 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5907BAF16E541EE009B3441 /* Debug */,
+				E5907BB016E541EE009B3441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5907BD116E5444F009B3441 /* Build configuration list for PBXNativeTarget "Service Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5907BD216E5444F009B3441 /* Debug */,
+				E5907BD316E5444F009B3441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5907B7216E541ED009B3441 /* Project object */;
+}
