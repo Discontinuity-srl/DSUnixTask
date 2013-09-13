@@ -156,6 +156,8 @@
 
   [self.task setTerminationHandler:^(NSTask *nsTask) {
     [delegate taskRunnerDidTerminate:weakSelf withStatus:nsTask.terminationStatus];
+    [nsTask.standardOutput fileHandleForReading].readabilityHandler = nil;
+    [nsTask.standardError fileHandleForReading].readabilityHandler = nil;
   }];
 }
 
