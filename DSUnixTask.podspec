@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = "DSUnixTask"
-  s.version       = "0.1.0"
+  s.version       = "0.1.1"
   s.summary       = "Launch and interact with awesome looking UNIX tasks."
   s.description   = <<-DESC
                       DSUnixTask is a library for Mac OS X which allows to launch and interact with awesome looking UNIX tasks.
